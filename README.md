@@ -206,7 +206,7 @@ tech-challenge-fase3/
 │   └── metrics/             18 tabelas de resultado (CSV/JSON)
 ├── docs/
 │   └── decisoes_analiticas.md
-├── images/                  18 figuras geradas pelo pipeline
+├── images/                  19 figuras geradas pelo pipeline
 ├── models/                  artefato treinado (.joblib)
 ├── run_pipeline.py
 ├── requirements.txt
