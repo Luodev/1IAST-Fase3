@@ -1,0 +1,35 @@
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- Jupyter ---------------------------------------------------------------
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# --- Dados derivados -------------------------------------------------------
+# O data lake local (bronze/silver/gold) e a ABT são REGENERADOS por
+# `python run_pipeline.py` a partir de data/raw/ e das APIs do IBGE. Versionar
+# binários que o código reproduz em segundos só inflaria o repositório.
+data/lake/
+data/processed/
+
+# Os CSVs de data/raw/ e data/external/ SÃO versionados de propósito: garantem
+# que o projeto rode offline e que os resultados sejam reproduzíveis mesmo que
+# uma API externa mude ou saia do ar.
+
+# --- Artefatos de modelo ---------------------------------------------------
+models/*.joblib
+
+# --- Sistema operacional ---------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editores --------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
