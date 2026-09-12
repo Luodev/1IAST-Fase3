@@ -1,0 +1,5 @@
+cluster,rotulo,municipios,intervencao_recomendada,ganho_esperado_pp,custo_relativo,ganho_por_unidade_de_custo
+0,Risco critico - baixa renda,1650,Recomposicao de aprendizagem em contraturno,6.13,2.5,2.452
+1,Alto desempenho - interior,1356,Material estruturado de alfabetizacao,0.39,1.5,0.26
+2,Desempenho intermediario - interior,2269,Busca ativa e apoio a frequencia,2.01,2.0,1.005
+3,Risco moderado - centros urbanos,121,Formacao continuada de professores,0.63,3.0,0.21
