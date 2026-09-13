@@ -9,7 +9,96 @@ até 2030 e um agente de aprendizado por reforço para alocar intervenções.
 
 ---
 
+## Integrantes do grupo
+
+| Integrante | RM |
+|---|---|
+| Bruno Lucas Fernandes dos Reis | RM371336 |
+| Lucas Damasceno da Cunha Lima | RM372040 |
+| Lucas Oliveira da Silva | RM371958 |
+| Luiz Guilherme Lima Sucupira | RM373474 |
+
+---
+
+## Resultados em resumo
+
+Todos os números abaixo saem de `reports/metrics/` e são regenerados por
+`python run_pipeline.py`. Cada tabela aponta para a seção que explica o método.
+
+### Painel geral
+
+| Indicador | Valor |
+|---|---|
+| Municípios analisados | 5.396 |
+| Preditores após a poda de redundância | 20 (16 numéricos + 4 categóricos) |
+| Modelo escolhido | Regressão Logística calibrada |
+| ROC AUC no conjunto de teste | **0,902** |
+| Brier score (erro da probabilidade) | 0,125 |
+| Correlação entre probabilidade prevista e taxa real | 0,77 |
+| Municípios classificados em risco educacional | 3.121 |
+| Municípios que atingem a meta de 2030 na projeção | 2.444 (45,3%) |
+
+### Comparação dos algoritmos → [§7](#7-escolha-do-algoritmo)
+
+Validação cruzada estratificada de 5 folds. A coluna **overfitting** é a
+diferença entre o AUC de treino e o de validação.
+
+| Modelo | ROC AUC validação | ROC AUC treino | Overfitting | F1 | Tempo |
+|---|---|---|---|---|---|
+| Random Forest | 0,9032 ± 0,0115 | 0,9760 | 0,0728 | 0,8447 | 18,5 s |
+| Extra Trees | 0,9030 ± 0,0112 | 0,9503 | 0,0472 | 0,8443 | 13,9 s |
+| Gradient Boosting | 0,9012 ± 0,0113 | 0,9680 | 0,0668 | 0,8359 | 4,1 s |
+| **Regressão Logística** ✅ | **0,9008 ± 0,0139** | 0,9067 | **0,0060** | **0,8462** | **1,2 s** |
+| Árvore de Decisão | 0,8798 ± 0,0110 | 0,9078 | 0,0280 | 0,8345 | 0,7 s |
+
+Os quatro primeiros empatam dentro do desvio entre folds. Pela regra do
+erro-padrão vence o mais estável — o que decorou 12 vezes menos o treino.
+
+### Fatores mais influentes → [§9](#9-interpretação-dos-resultados)
+
+| # | Variável | Queda no ROC AUC ao ser embaralhada |
+|---|---|---|
+| 1 | Unidade da Federação | 0,183 |
+| 2 | Proficiência média em Português em 2023 | 0,056 |
+| 3 | Percentil do município dentro da UF em 2023 | 0,044 |
+| 4 | Região do país | 0,030 |
+| 5 | Distância entre o resultado de 2023 e a meta de 2025 | 0,013 |
+| 6 | Participação dos alunos na avaliação de 2023 | 0,012 |
+| 7 | Posição relativa de população dentro da UF | 0,009 |
+
+### Distribuição do risco previsto → [§12](#12-aplicação-prática-para-políticas-públicas)
+
+| Faixa de risco | Municípios | % |
+|---|---|---|
+| Crítico | 1.411 | 26,1% |
+| Alto | 933 | 17,3% |
+| Moderado | 679 | 12,6% |
+| Baixo | 2.373 | 44,0% |
+
+### Perfis municipais → [§10.1](#101-quatro-perfis-municipais-e-o-mais-surpreendente-são-as-grandes-cidades)
+
+| Perfil | Municípios | Taxa 2024 | PIB per capita | Pop. mediana | Alfab. adulta | No patamar |
+|---|---|---|---|---|---|---|
+| Risco crítico — baixa renda | 1.650 | 46,5% | R$ 13,3 mil | 13,2 mil | 81,7% | 19% |
+| Desempenho intermediário — interior | 2.269 | 65,4% | R$ 37,9 mil | 13,0 mil | 93,5% | 67% |
+| Alto desempenho — interior | 1.356 | 79,4% | R$ 20,2 mil | 6,9 mil | 86,3% | 89% |
+| **Risco moderado — centros urbanos** | 121 | **53,2%** | R$ 37,6 mil | **264 mil** | **96,3%** | 27% |
+
+### Ritmo projetado até 2030 → [§10.2](#102-o-brasil-avança-e-4-em-cada-10-municípios-andam-para-trás)
+
+| Classificação | Municípios | % |
+|---|---|---|
+| No ritmo da meta | 2.541 | 47,1% |
+| **Em retrocesso** | **2.250** | **41,7%** |
+| Ritmo crítico | 365 | 6,8% |
+| Ritmo insuficiente | 240 | 4,4% |
+
+---
+
 ## Índice
+
+- [Integrantes do grupo](#integrantes-do-grupo)
+- [Resultados em resumo](#resultados-em-resumo)
 
 1. [Contexto do problema](#1-contexto-do-problema)
 2. [Objetivo analítico](#2-objetivo-analítico)
@@ -501,10 +590,31 @@ O agente de aprendizado por reforço (UCB com bônus escalado pela variância)
 convergiu para a intervenção ótima em **96,8%** das decisões, com arrependimento
 acumulado de 19,8 pontos percentuais contra 217 do epsilon-greedy.
 
+| Agente | Arrependimento acumulado | Escolhas ótimas | Ganho total (p.p.) |
+|---|---|---|---|
+| **UCB (variante UCB-V)** | **19,8** | **96,8%** | 11.443 |
+| Epsilon-Greedy | 217,2 | 91,9% | 11.248 |
+| Thompson Sampling | 364,3 | 72,1% | 11.110 |
+
+O arrependimento mede quanto se deixou de ganhar por não ter escolhido, desde o
+início, a melhor intervenção de cada perfil. Em política pública, cada ponto é
+ganho de alfabetização que não aconteceu.
+
 A política aprendida diferencia a intervenção por perfil, e o retorno por unidade
 de orçamento é sistematicamente maior nos perfis de risco crítico — eles estão
 longe do teto de saturação. Investir onde o indicador já está alto rende pouco,
 matematicamente e na prática.
+
+| Perfil | Intervenção recomendada | Ganho esperado | Custo | Ganho por unidade de custo |
+|---|---|---|---|---|
+| Risco crítico — baixa renda | Recomposição de aprendizagem em contraturno | 6,13 p.p. | 2,5 | **2,452** |
+| Desempenho intermediário — interior | Busca ativa e apoio à frequência | 2,01 p.p. | 2,0 | 1,005 |
+| Alto desempenho — interior | Material estruturado de alfabetização | 0,39 p.p. | 1,5 | 0,260 |
+| Risco moderado — centros urbanos | Formação continuada de professores | 0,63 p.p. | 3,0 | 0,210 |
+
+> O ambiente é um **simulador calibrado nos dados reais**, não uma avaliação de
+> impacto — não existe base pública com o efeito causal de cada programa por
+> município. O experimento demonstra a mecânica de decisão. Ver [§11](#11-limitações-do-projeto).
 
 Na simulação de alocação, um orçamento fixo alcança 1.200 municípios com taxa
 média de 42%, contra uma média geral de 63% — a regra de prioridade se comporta
@@ -558,6 +668,13 @@ O viés existe e vai no sentido de subestimar o problema.
 1. **`ranking_risco_municipios.csv`** — os 5.396 municípios ordenados por risco,
    com probabilidade calibrada, faixa de risco e distância para a meta de 2025.
    É a lista de chamada da política: quem precisa de atenção agora.
+
+   | Faixa de risco | Municípios | % | Leitura para a gestão |
+   |---|---|---|---|
+   | Crítico | 1.411 | 26,1% | Intervenção imediata |
+   | Alto | 933 | 17,3% | Prioridade no ciclo atual |
+   | Moderado | 679 | 12,6% | Monitoramento próximo |
+   | Baixo | 2.373 | 44,0% | Acompanhamento de rotina |
 
 2. **`clusters_perfis.csv` e `clusters_municipios.csv`** — o perfil de cada
    município. Define **que tipo** de programa faz sentido, não só se ele precisa
