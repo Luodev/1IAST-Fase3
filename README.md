@@ -9,14 +9,11 @@ até 2030 e um agente de aprendizado por reforço para alocar intervenções.
 
 ---
 
-## Integrantes do grupo
+## Integrante
 
-| Integrante | RM |
+| Nome | RM |
 |---|---|
-| Bruno Lucas Fernandes dos Reis | RM371336 |
-| Lucas Damasceno da Cunha Lima | RM372040 |
 | Lucas Oliveira da Silva | RM371958 |
-| Luiz Guilherme Lima Sucupira | RM373474 |
 
 ---
 
@@ -97,7 +94,7 @@ erro-padrão vence o mais estável — o que decorou 12 vezes menos o treino.
 
 ## Índice
 
-- [Integrantes do grupo](#integrantes-do-grupo)
+- [Integrante](#integrante)
 - [Resultados em resumo](#resultados-em-resumo)
 
 1. [Contexto do problema](#1-contexto-do-problema)
@@ -290,6 +287,7 @@ tech-challenge-fase3/
 │   └── visualization/       plots
 ├── reports/
 │   ├── relatorio_tecnico.md
+│   ├── apresentacao_executiva.pptx
 │   ├── roteiro_video.md
 │   ├── resumo_executivo.json
 │   └── metrics/             18 tabelas de resultado (CSV/JSON)
@@ -767,6 +765,7 @@ git log --oneline --graph --all
 
 - [`reports/relatorio_tecnico.md`](reports/relatorio_tecnico.md) — relatório técnico completo
 - [`docs/decisoes_analiticas.md`](docs/decisoes_analiticas.md) — registro das decisões e alternativas descartadas
+- [`reports/apresentacao_executiva.pptx`](reports/apresentacao_executiva.pptx) — apresentação executiva de 5 minutos, com a fala cronometrada nas notas
 - [`reports/roteiro_video.md`](reports/roteiro_video.md) — roteiro do vídeo executivo de 5 minutos
 - [`data/README.md`](data/README.md) — dicionário de dados
 
