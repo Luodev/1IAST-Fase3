@@ -1,0 +1,21 @@
+variavel,queda_roc_auc,desvio,descricao
+sigla_uf,0.18313,0.01491,Unidade da Federação
+media_portugues_2023,0.05563,0.00744,Proficiência média em Português em 2023 (pontos Saeb)
+percentil_uf_2023,0.04385,0.00686,Percentil do município dentro da UF em 2023
+regiao,0.03001,0.00247,Região do país
+gap_2023_para_meta_2025,0.01315,0.00352,Distância entre o resultado de 2023 e a meta de 2025 (p.p.)
+participacao_2023,0.01249,0.00263,Participação dos alunos na avaliação de 2023 (%)
+porte_relativo_na_uf,0.00876,0.00183,Posição relativa de população dentro da UF (0 a 1)
+porte_municipio,0.00801,0.00124,Faixa populacional do município
+ranking_uf_2023,0.00714,0.00222,Posição do município no ranking da UF em 2023
+nivel_alfabetizacao_2023,0.00662,0.00258,Nível de alfabetização atribuído pelo INEP em 2023
+taxa_alfabetizacao_15mais,0.00272,0.00136,"Alfabetização da população de 15+ anos (Censo 2022, %)"
+taxa_estadual_2023,0.00136,0.00096,Taxa de alfabetização da rede estadual local em 2023 (%)
+log_pib_per_capita,0.00121,0.00147,Log do PIB per capita municipal (2021)
+dif_municipal_estadual_2023,0.00096,0.00071,Diferença entre rede municipal e estadual em 2023 (p.p.)
+log_populacao,0.00094,0.00127,Log da população residente (Censo 2022)
+dif_crianca_adulto,0.00047,0.00074,Diferença entre alfabetização infantil e adulta (p.p.)
+densidade_hab_km2,0.0004,0.00012,Densidade demográfica (hab/km²)
+area_km2,0.00018,0.00012,Área territorial do município (km²)
+taxa_alf_2023,0.0001,0.00053,Taxa de alfabetização da rede municipal em 2023 (%)
+dif_municipal_privada_2023,-0.00049,0.0008,Diferença entre rede municipal e privada em 2023 (p.p.)

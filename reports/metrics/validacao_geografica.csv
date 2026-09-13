@@ -1,0 +1,6 @@
+regiao_de_teste,n_municipios,roc_auc,f1,acuracia
+Nordeste,1779,0.7796,0.6,0.7212
+Norte,413,0.7704,0.5283,0.6973
+Sudeste,1612,0.7383,0.7495,0.67
+Centro-Oeste,462,0.7023,0.7468,0.6537
+Sul,1130,0.6625,0.7645,0.6805

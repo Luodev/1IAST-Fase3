@@ -1,0 +1,65 @@
+variavel,shap_medio_absoluto,shap_medio,descricao,direcao
+percentil_uf_2023,0.69993,0.06665,Percentil do município dentro da UF em 2023,aumenta a chance
+media_portugues_2023,0.68011,0.04088,Proficiência média em Português em 2023 (pontos Saeb),aumenta a chance
+sigla_uf_BA,0.53574,-0.02618,Unidade da Federação = BA,reduz a chance
+gap_2023_para_meta_2025,0.49405,-0.01831,Distância entre o resultado de 2023 e a meta de 2025 (p.p.),reduz a chance
+participacao_2023,0.32663,0.00603,Participação dos alunos na avaliação de 2023 (%),aumenta a chance
+sigla_uf_CE,0.31024,-0.05939,Unidade da Federação = CE,reduz a chance
+regiao_Sudeste,0.30921,0.0602,Região do país = Sudeste,aumenta a chance
+sigla_uf_GO,0.29446,-0.08749,Unidade da Federação = GO,reduz a chance
+sigla_uf_SP,0.27671,-0.03753,Unidade da Federação = SP,reduz a chance
+sigla_uf_RS,0.27646,-0.05127,Unidade da Federação = RS,reduz a chance
+regiao_Nordeste,0.27032,-0.00768,Região do país = Nordeste,reduz a chance
+porte_relativo_na_uf,0.24308,0.01299,Posição relativa de população dentro da UF (0 a 1),aumenta a chance
+ranking_uf_2023,0.23864,0.00238,Posição do município no ranking da UF em 2023,aumenta a chance
+log_populacao,0.22904,-0.00895,Log da população residente (Censo 2022),reduz a chance
+porte_municipio_10-20 mil,0.21485,-0.00394,Faixa populacional do município = 10-20 mil,reduz a chance
+porte_municipio_Ate 5 mil,0.20416,0.00568,Faixa populacional do município = Ate 5 mil,aumenta a chance
+sigla_uf_PR,0.19011,-0.03766,Unidade da Federação = PR,reduz a chance
+porte_municipio_5-10 mil,0.17769,0.00144,Faixa populacional do município = 5-10 mil,aumenta a chance
+taxa_alfabetizacao_15mais,0.15615,-0.00253,"Alfabetização da população de 15+ anos (Censo 2022, %)",reduz a chance
+regiao_Norte,0.14618,0.03036,Região do país = Norte,aumenta a chance
+log_pib_per_capita,0.14343,0.00754,Log do PIB per capita municipal (2021),aumenta a chance
+sigla_uf_RN,0.12453,0.02237,Unidade da Federação = RN,aumenta a chance
+dif_crianca_adulto,0.11153,-0.00357,Diferença entre alfabetização infantil e adulta (p.p.),reduz a chance
+nivel_alfabetizacao_2023_5,0.10995,0.00759,Nível de alfabetização atribuído pelo INEP em 2023 = 5,aumenta a chance
+nivel_alfabetizacao_2023_4,0.10766,0.00095,Nível de alfabetização atribuído pelo INEP em 2023 = 4,aumenta a chance
+sigla_uf_ES,0.10309,0.04882,Unidade da Federação = ES,aumenta a chance
+regiao_Centro-Oeste,0.09835,-0.01551,Região do país = Centro-Oeste,reduz a chance
+sigla_uf_SC,0.09494,-0.01483,Unidade da Federação = SC,reduz a chance
+nivel_alfabetizacao_2023_1,0.0921,0.00764,Nível de alfabetização atribuído pelo INEP em 2023 = 1,aumenta a chance
+nivel_alfabetizacao_2023_0,0.09187,0.00305,Nível de alfabetização atribuído pelo INEP em 2023 = 0,aumenta a chance
+taxa_estadual_2023,0.08797,0.0197,Taxa de alfabetização da rede estadual local em 2023 (%),aumenta a chance
+sigla_uf_PI,0.06858,0.00615,Unidade da Federação = PI,aumenta a chance
+sigla_uf_TO,0.06214,0.01144,Unidade da Federação = TO,aumenta a chance
+taxa_alf_2023,0.05657,-0.00136,Taxa de alfabetização da rede municipal em 2023 (%),reduz a chance
+dif_municipal_estadual_2023,0.05567,-0.00293,Diferença entre rede municipal e estadual em 2023 (p.p.),reduz a chance
+porte_municipio_100-500 mil,0.05044,0.00356,Faixa populacional do município = 100-500 mil,aumenta a chance
+missingindicator_dif_municipal_privada_2023,0.05007,-0.00963,missingindicator_dif_municipal_privada_2023,reduz a chance
+sigla_uf_PA,0.0465,0.00953,Unidade da Federação = PA,aumenta a chance
+porte_municipio_20-50 mil,0.04632,0.00367,Faixa populacional do município = 20-50 mil,aumenta a chance
+sigla_uf_MG,0.04613,0.00776,Unidade da Federação = MG,aumenta a chance
+sigla_uf_SE,0.045,-0.045,Unidade da Federação = SE,reduz a chance
+sigla_uf_PE,0.03956,0.00449,Unidade da Federação = PE,aumenta a chance
+dif_municipal_privada_2023,0.03705,-0.01087,Diferença entre rede municipal e privada em 2023 (p.p.),reduz a chance
+nivel_alfabetizacao_2023_2,0.037,-0.00199,Nível de alfabetização atribuído pelo INEP em 2023 = 2,reduz a chance
+missingindicator_participacao_2023,0.03295,-0.00533,missingindicator_participacao_2023,reduz a chance
+sigla_uf_MT,0.02613,-0.0,Unidade da Federação = MT,aumenta a chance
+sigla_uf_RJ,0.02604,0.00177,Unidade da Federação = RJ,aumenta a chance
+missingindicator_dif_municipal_estadual_2023,0.02498,-0.00301,missingindicator_dif_municipal_estadual_2023,reduz a chance
+missingindicator_taxa_estadual_2023,0.02498,-0.00301,missingindicator_taxa_estadual_2023,reduz a chance
+sigla_uf_MA,0.02374,0.00384,Unidade da Federação = MA,aumenta a chance
+regiao_Sul,0.01721,-0.00122,Região do país = Sul,reduz a chance
+sigla_uf_AL,0.01429,-0.0,Unidade da Federação = AL,aumenta a chance
+sigla_uf_PB,0.01312,-0.00073,Unidade da Federação = PB,reduz a chance
+sigla_uf_AM,0.01228,0.00415,Unidade da Federação = AM,aumenta a chance
+missingindicator_gap_2023_para_meta_2025,0.01158,0.00391,missingindicator_gap_2023_para_meta_2025,aumenta a chance
+porte_municipio_50-100 mil,0.01149,-0.00233,Faixa populacional do município = 50-100 mil,reduz a chance
+sigla_uf_MS,0.01115,-0.01115,Unidade da Federação = MS,reduz a chance
+densidade_hab_km2,0.0111,-0.001,Densidade demográfica (hab/km²),reduz a chance
+nivel_alfabetizacao_2023_3,0.01079,0.00049,Nível de alfabetização atribuído pelo INEP em 2023 = 3,aumenta a chance
+sigla_uf_AP,0.00963,0.00323,Unidade da Federação = AP,aumenta a chance
+sigla_uf_RO,0.00955,0.00955,Unidade da Federação = RO,aumenta a chance
+area_km2,0.00442,-7e-05,Área territorial do município (km²),reduz a chance
+porte_municipio_Acima de 500 mil,0.00382,-0.00382,Faixa populacional do município = Acima de 500 mil,reduz a chance
+nivel_alfabetizacao_2023_None,0.00098,-0.00016,Nível de alfabetização atribuído pelo INEP em 2023 = None,reduz a chance

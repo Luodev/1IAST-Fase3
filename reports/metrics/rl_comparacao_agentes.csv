@@ -1,0 +1,4 @@
+agente,regret_final,ganho_total_pp,taxa_acerto_final,politica_correta,perfis
+UCB,19.76,11443.26,0.968,3,4
+Epsilon-Greedy,217.16,11247.72,0.9187,3,4
+Thompson Sampling,364.31,11110.41,0.7212,4,4

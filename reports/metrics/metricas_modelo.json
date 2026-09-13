@@ -1,0 +1,67 @@
+{
+  "modelo_escolhido": "Regressao Logistica",
+  "justificativa_da_escolha": "Random Forest teve o maior ROC AUC (0.9032), mas Regressao Logistica ficou dentro de um desvio-padrão (0.9008) com overfitting de 0.0060 contra 0.0728. Pela regra do erro-padrão, vence o modelo mais simples e mais estável.",
+  "melhores_parametros": {
+    "modelo__penalty": "l2",
+    "modelo__class_weight": "balanced",
+    "modelo__C": "5"
+  },
+  "roc_auc_cv_treino": 0.9018,
+  "teste_sem_calibracao": {
+    "limiar": 0.5,
+    "acuracia": 0.8231,
+    "precisao": 0.8605,
+    "recall": 0.8228,
+    "f1": 0.8412,
+    "roc_auc": 0.9029,
+    "pr_auc": 0.926,
+    "brier": 0.1256,
+    "recall_risco": 0.8237,
+    "vp": 506,
+    "vn": 383,
+    "fp": 82,
+    "fn": 109
+  },
+  "teste_calibrado": {
+    "limiar": 0.5,
+    "acuracia": 0.8213,
+    "precisao": 0.847,
+    "recall": 0.8374,
+    "f1": 0.8422,
+    "roc_auc": 0.9024,
+    "pr_auc": 0.9246,
+    "brier": 0.1246,
+    "recall_risco": 0.8,
+    "vp": 515,
+    "vn": 372,
+    "fp": 93,
+    "fn": 100
+  },
+  "teste_calibrado_limiar_otimo": {
+    "limiar": 0.77,
+    "acuracia": 0.7907,
+    "precisao": 0.9294,
+    "recall": 0.6846,
+    "f1": 0.7884,
+    "roc_auc": 0.9024,
+    "pr_auc": 0.9246,
+    "brier": 0.1246,
+    "recall_risco": 0.9312,
+    "vp": 421,
+    "vn": 433,
+    "fp": 32,
+    "fn": 194
+  },
+  "limiar_otimo": 0.77,
+  "ponte_municipio_aluno": {
+    "correlacao_pearson": 0.7663,
+    "correlacao_spearman": 0.7824,
+    "corte_usado": 60.0
+  },
+  "diagnostico_vazamento": {
+    "preditores_avaliados": 20,
+    "colunas_proibidas_encontradas": 0,
+    "maior_correlacao_com_alvo": 0.651,
+    "variavel_mais_correlacionada": "media_portugues_2023"
+  }
+}

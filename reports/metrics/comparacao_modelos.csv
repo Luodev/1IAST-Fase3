@@ -1,0 +1,6 @@
+modelo,roc_auc_val,roc_auc_desvio,roc_auc_treino,overfitting,f1_val,pr_auc_val,acuracia_val,tempo_fit_s
+Random Forest,0.9032,0.0115,0.976,0.0728,0.8447,0.921,0.819,18.53
+Extra Trees,0.903,0.0112,0.9503,0.0472,0.8443,0.9211,0.8197,13.91
+Gradient Boosting,0.9012,0.0113,0.968,0.0668,0.8359,0.9205,0.8093,4.05
+Regressao Logistica,0.9008,0.0139,0.9067,0.006,0.8462,0.9152,0.8228,1.21
+Arvore de Decisao,0.8798,0.011,0.9078,0.028,0.8345,0.8837,0.8054,0.71
