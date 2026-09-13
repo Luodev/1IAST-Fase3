@@ -1,5 +1,10 @@
 # Roteiro do vídeo executivo — 5 minutos
 
+> **Apresentação pronta:** [`apresentacao_executiva.pptx`](apresentacao_executiva.pptx)
+> — 8 slides, com a fala e o tempo de cada slide nas **notas do apresentador**
+> (total de 5:00, cerca de 120 palavras por minuto). Este documento é o roteiro
+> de referência; o PPT é a versão enxuta para gravar.
+
 **Cenário:** reunião executiva com gestores públicos de educação.
 **Tom:** direto, sem jargão técnico. Quem está do outro lado decide orçamento,
 não escolhe algoritmo.
