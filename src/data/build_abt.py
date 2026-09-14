@@ -22,7 +22,7 @@ Adotamos então o grão mais fino possível e mantemos a leitura no aluno:
     real do município (ver `evaluation/metrics.calibracao`), o que permite lê-la
     como "chance de o aluno daquele município estar alfabetizado".
 
-A limitação está declarada no README e nas limitações do relatório técnico.
+A limitação está declarada na seção de limitações do README.
 
 -----------------------------------------------------------------------------
 REGRAS ANTI-VAZAMENTO (data leakage)
