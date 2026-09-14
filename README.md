@@ -159,7 +159,7 @@ Adotamos o grão mais fino disponível e mantemos a leitura no aluno:
   e taxa observada é de **0,77**. É isso que autoriza lê-la como a chance de um
   aluno daquele município terminar o 2º ano alfabetizado.
 
-A limitação está declarada na seção 11 e no relatório técnico.
+A limitação está declarada na seção 11.
 
 ### Perguntas de negócio respondidas
 
@@ -286,10 +286,6 @@ tech-challenge-fase3/
 │   ├── evaluation/          metrics · interpretability
 │   └── visualization/       plots
 ├── reports/
-│   ├── relatorio_tecnico.md
-│   ├── apresentacao_executiva.pptx
-│   ├── roteiro_video.md
-│   ├── resumo_executivo.json
 │   └── metrics/             18 tabelas de resultado (CSV/JSON)
 ├── docs/
 │   └── decisoes_analiticas.md
@@ -763,10 +759,7 @@ git log --oneline --graph --all
 
 ## Documentação complementar
 
-- [`reports/relatorio_tecnico.md`](reports/relatorio_tecnico.md) — relatório técnico completo
 - [`docs/decisoes_analiticas.md`](docs/decisoes_analiticas.md) — registro das decisões e alternativas descartadas
-- [`reports/apresentacao_executiva.pptx`](reports/apresentacao_executiva.pptx) — apresentação executiva de 5 minutos, com a fala cronometrada nas notas
-- [`reports/roteiro_video.md`](reports/roteiro_video.md) — roteiro do vídeo executivo de 5 minutos
 - [`data/README.md`](data/README.md) — dicionário de dados
 
 ---

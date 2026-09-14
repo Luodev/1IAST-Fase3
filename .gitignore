@@ -33,3 +33,9 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# --- Relatórios ------------------------------------------------------------
+# Só as tabelas de reports/metrics/ são versionadas. O resumo_executivo.json é
+# regenerado por run_pipeline.py e fica fora do repositório.
+reports/*
+!reports/metrics/
